@@ -16,7 +16,7 @@ class KanbanBoard extends Page
 
     protected static ?string $navigationIcon = 'heroicon-o-document-text';
 
-    protected static string $view = 'filament-kanban::kanban-board';
+    protected string $view = 'filament-kanban::kanban-board';
 
     protected static string $headerView = 'filament-kanban::kanban-header';
 
