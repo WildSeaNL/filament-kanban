@@ -1,4 +1,4 @@
-<x-filament-panels::form wire:submit.prevent="editModalFormSubmitted">
+<form wire:submit.prevent="editModalFormSubmitted">
     <x-filament::modal id="kanban--edit-record-modal" :slideOver="$this->getEditModalSlideOver()" :width="$this->getEditModalWidth()">
         <x-slot name="header">
             <x-filament::modal.heading>
@@ -6,7 +6,9 @@
             </x-filament::modal.heading>
         </x-slot>
 
-        {{ $this->form }}
+        @if($this->form->getRecord())
+            {{ $this->form }}
+        @endif
 
         <x-slot name="footer">
             <x-filament::button type="submit">
@@ -18,4 +20,4 @@
             </x-filament::button>
         </x-slot>
     </x-filament::modal>
-</x-filament-panels::form>
+</form>
