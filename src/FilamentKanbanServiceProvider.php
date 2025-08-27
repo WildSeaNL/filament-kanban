@@ -37,11 +37,6 @@ class FilamentKanbanServiceProvider extends PackageServiceProvider
 
     public function packageBooted(): void
     {
-        // Asset Registration
-        FilamentAsset::register(
-            $this->getAssets(),
-            $this->getAssetPackageName()
-        );
 
         // Handle Stubs
         if (app()->runningInConsole()) {
